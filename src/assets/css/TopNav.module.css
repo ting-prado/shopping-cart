@@ -1,0 +1,18 @@
+.nav {
+}
+
+.container {
+  justify-content: space-between;
+}
+
+.brand {
+  margin: 0 1rem;
+}
+
+.collapse {
+  flex-grow: 0 !important;
+}
+
+.link {
+  padding: 0 2rem !important;
+}
