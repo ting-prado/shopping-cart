@@ -1,10 +1,10 @@
-import {put, takeLatest} from "redux-saga/effects";
-import axios from "axios";
+import {call, put, takeLatest} from "redux-saga/effects";
 import { GET_CATEGORIES, setCategories } from "../actions";
+import { fetchCategories } from "../../api/handler";
 
 function* handleGetCategories() {
     try {
-        const response = yield axios.get("https://dummyjson.com/products/categories");
+        const response = yield call(fetchCategories);
         yield put(setCategories(response.data.slice(0, 7)))
     }catch(err) {
         console.log(err);
