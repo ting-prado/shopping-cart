@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import styles from '../assets/css/TopNav.module.css';
+import styles from '../../assets/css/TopNav.module.css';
 
 const TopNav = () => {
   return (
