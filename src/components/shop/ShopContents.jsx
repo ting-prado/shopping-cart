@@ -8,7 +8,7 @@ const ShopContents = () => {
 	let location = useLocation();
 	const dispatch = useDispatch();
 	const { category } = useParams();
-	const products = useSelector((state) => state.states.products);
+	const products = useSelector((state) => state.products);
 
 	useEffect(() => {
 		dispatch(getProducts(category));

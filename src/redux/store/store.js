@@ -1,16 +1,15 @@
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import reducer from "../reducers";
 import { watcherSaga } from "../sagas/rootSaga";
 
-const rootReducer = combineReducers({
-    states: reducer
-})
-
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
 
-const store = createStore(rootReducer, {}, applyMiddleware(...middleware));
+const store = configureStore({
+	reducer,
+	middleware
+});
 
-sagaMiddleware.run(watcherSaga)
+sagaMiddleware.run(watcherSaga);
 export default store;
