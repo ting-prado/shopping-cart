@@ -1,0 +1,14 @@
+.shopping-page {
+	padding: 1.5rem;
+	border: 2px solid black;
+	min-height: calc(100vh - 40px);
+}
+
+.card img {
+	width: 15vw;
+}
+
+.card svg {
+	color: goldenrod;
+	margin-left: 5px;
+}

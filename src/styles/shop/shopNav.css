@@ -1,0 +1,27 @@
+.shop-nav {
+	border: 2px solid red;
+	width: 330px;
+}
+
+.shop-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: "Darumadrop One", cursive;
+	font-size: min(4vw, 24px);
+}
+
+.shop-nav a {
+	text-decoration: none;
+}
+
+.shop-nav a:hover,
+.shop-nav a.active {
+	color: rebeccapurple;
+}
+
+@media screen and (max-width: 575.9px) {
+	.shop-nav {
+		width: 100%;
+	}
+}

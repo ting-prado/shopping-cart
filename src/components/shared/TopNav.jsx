@@ -1,21 +1,21 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import styles from "../../styles/shared/TopNav.module.css";
+import "../../styles/shared/topNav.css";
 
 const TopNav = () => {
 	return (
-		<Navbar className={styles.nav} expand="sm">
+		<Navbar expand="sm">
 			<Container fluid>
-				<Link className={styles.brand} to="/">
+				<Link className="brand" to="/">
 					Sample Logo
 				</Link>
 				<Navbar.Toggle aria-controls="navbar" />
-				<Navbar.Collapse className={styles.collapse} id="navbar">
+				<Navbar.Collapse id="navbar">
 					<Nav>
-						<Link to="/" className={styles.link}>
+						<Link to="/" className="link">
 							Home
 						</Link>
-						<Link to="/shop/smartphones" className={styles.link}>
+						<Link to="/shop/smartphones" className="link">
 							Shop
 						</Link>
 					</Nav>
