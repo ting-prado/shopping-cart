@@ -1,9 +1,17 @@
+import "../../styles/home/home.css";
+import img from "../../assets/img/2741840.jpg";
+
 const LandingPage = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hi from the landing page</h1>
-    </div>
-  );
+	return (
+		<div className="landing d-flex flex-column">
+			<div>
+				<h1>Fake Store</h1>
+				<p>A place where you can buy fake things with fake money</p>
+			</div>
+			<img src={img} alt="landing" />
+			<button>Shop Now</button>
+		</div>
+	);
 };
 
 export default LandingPage;
