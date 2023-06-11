@@ -17,20 +17,24 @@ const ShopNav = () => {
 
 	return (
 		<nav className="shop-nav">
-			<ul className="row justify-content-center gap-2">
-				{categories.map((category, idx) => (
-					<li className="col-auto col-sm-12" key={idx}>
-						<Link
-							to={`/shop/${category}`}
-							className={
-								location.pathname === `/shop/${category}` ? "active" : ""
-							}
-						>
-							{category[0].toUpperCase() + category.slice(1)}
-						</Link>
-					</li>
-				))}
-			</ul>
+			<div>
+				<h2 className="mb-3 pb-2">Product Categories</h2>
+				<ul className="row justify-content-center gap-4">
+					{categories.map((category, idx) => (
+						<li className="col-auto col-sm-12" key={idx}>
+							<Link
+								to={`/shop/${category}`}
+								className={
+									location.pathname === `/shop/${category}` ? "active" : ""
+								}
+							>
+								<span>{category[0].toUpperCase() + category.slice(1)}</span>
+								<span>(5)</span>
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 		</nav>
 	);
 };
