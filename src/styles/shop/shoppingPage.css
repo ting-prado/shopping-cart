@@ -44,6 +44,7 @@
 .card-body p:not(.card-text),
 .card-title {
 	font-family: "Nunito Sans", sans-serif;
+	font-weight: bold !important;
 }
 
 .card-text {
