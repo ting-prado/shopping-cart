@@ -1,7 +1,21 @@
 import { Card } from "react-bootstrap";
 import { BsFillStarFill } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../../redux/actions";
 
 const ItemCard = ({ item }) => {
+	const cartList = useSelector((state) => state.cartList);
+	const dispatch = useDispatch();
+	const condition = cartList.some((prod) => prod.id === item.id);
+
+	const addItemToCart = () => {
+		dispatch(addToCart(item));
+	};
+
+	const removeItemFromCart = () => {
+		dispatch(removeFromCart(item));
+	};
+
 	return (
 		<Card>
 			<Card.Body className="d-flex flex-column align-items-center">
@@ -18,7 +32,9 @@ const ItemCard = ({ item }) => {
 							<BsFillStarFill />
 						</div>
 					</div>
-					<button>Add to cart</button>
+					<button onClick={condition ? removeItemFromCart : addItemToCart}>
+						{condition ? "Remove from cart" : "Add to cart"}
+					</button>
 				</div>
 			</Card.Body>
 		</Card>

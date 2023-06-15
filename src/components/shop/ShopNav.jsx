@@ -9,7 +9,6 @@ const ShopNav = () => {
 	let location = useLocation();
 	const categories = useSelector((state) => state.categories);
 	const dispatch = useDispatch();
-	console.log(location.pathname === "/shop/smartphones");
 
 	useEffect(() => {
 		dispatch(getCategories());

@@ -5,6 +5,7 @@
 }
 
 .landing h1 {
+	margin-top: 1rem;
 	font-family: "Lilita One", cursive;
 	text-transform: uppercase;
 	font-size: min(15vw, 130px);
@@ -33,6 +34,7 @@
 	border-radius: 5px;
 	background: none;
 	margin-top: 2rem;
+	background-color: #ffffff70;
 }
 
 @media screen and (max-width: 575.9px) {
