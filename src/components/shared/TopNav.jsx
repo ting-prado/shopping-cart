@@ -38,7 +38,7 @@ const TopNav = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-			<Offcanvas placement="end" scroll={true} show={show} onHide={toggleShow}>
+			<Offcanvas placement="end" scroll={false} show={show} onHide={toggleShow}>
 				<Offcanvas.Header closeButton>
 					<Offcanvas.Title>Items in your bag</Offcanvas.Title>
 				</Offcanvas.Header>
