@@ -26,7 +26,11 @@
 }
 
 .cart-item span {
-	flex: 40%;
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100px;
 }
 
 .cart-item > div {
@@ -34,7 +38,9 @@
 }
 
 .cart-item img {
-	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
 	height: auto;
 }
 
