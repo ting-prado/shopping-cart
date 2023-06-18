@@ -3,7 +3,8 @@ import {
 	REMOVE_FROM_CART,
 	SET_PRODUCTS,
 	SET_CATEGORIES,
-	UPDATE_CART
+	UPDATE_CART,
+	REMOVE_ALL_IN_CART
 } from "../actions";
 
 const initialState = {
@@ -32,6 +33,12 @@ const reducer = (state = initialState, action) => {
 				...state,
 				cartCount: state.cartCount - 1,
 				cartList: state.cartList.filter((prod) => prod.id !== item.id)
+			};
+		case REMOVE_ALL_IN_CART:
+			return {
+				...state,
+				cartCount: 0,
+				cartList: []
 			};
 		case UPDATE_CART:
 			return {

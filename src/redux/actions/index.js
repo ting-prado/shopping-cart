@@ -1,6 +1,7 @@
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const UPDATE_CART = "UPDATE_CART";
+export const REMOVE_ALL_IN_CART = "REMOVE_ALL_IN_CART";
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const SET_PRODUCTS = "SET_PRODUCTS";
 export const GET_CATEGORIES = "GET_CATEGORIES";
@@ -19,6 +20,10 @@ export const removeFromCart = (item) => ({
 export const updateCart = (item) => ({
 	type: UPDATE_CART,
 	item
+});
+
+export const removeAllCart = () => ({
+	type: REMOVE_ALL_IN_CART
 });
 
 export const getProducts = (arg) => ({

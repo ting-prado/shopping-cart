@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 import "../../styles/shared/shoppingCart.css";
 import { useEffect, useState } from "react";
 
-const ShoppingCart = () => {
+const ShoppingCart = ({ handleCheckout }) => {
 	const cartList = useSelector((state) => state.cartList);
 	const [subTotal, setSubTotal] = useState(0);
 
@@ -47,6 +47,7 @@ const ShoppingCart = () => {
 				<button
 					disabled={cartList.length === 0}
 					className="btn mt-3 btn-success p-2"
+					onClick={handleCheckout}
 				>
 					Checkout
 				</button>

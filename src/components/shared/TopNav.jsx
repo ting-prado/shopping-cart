@@ -1,16 +1,28 @@
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
-import "../../styles/shared/topNav.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeAllCart } from "../../redux/actions";
 import { useState } from "react";
+import SuccessModal from "./SuccessModal";
 import ShoppingCart from "./ShoppingCart";
+import "../../styles/shared/topNav.css";
 
 const TopNav = () => {
 	const cartCount = useSelector((state) => state.cartCount);
+	const dispatch = useDispatch();
 	const [show, setShow] = useState(false);
+	const [modalShow, setModalShow] = useState(false);
+
+	const toggleModal = () => setModalShow(!modalShow);
 
 	const toggleShow = () => setShow(!show);
+
+	const handleCheckout = () => {
+		dispatch(removeAllCart());
+		toggleShow();
+		toggleModal();
+	};
 
 	return (
 		<>
@@ -43,9 +55,10 @@ const TopNav = () => {
 					<Offcanvas.Title>Items in your bag</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
-					<ShoppingCart />
+					<ShoppingCart handleCheckout={handleCheckout} />
 				</Offcanvas.Body>
 			</Offcanvas>
+			<SuccessModal onHide={toggleModal} show={modalShow} />
 		</>
 	);
 };
