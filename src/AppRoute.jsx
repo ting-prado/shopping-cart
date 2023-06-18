@@ -6,7 +6,7 @@ const AppRoute = () => {
 	return (
 		<Routes>
 			<Route path="/shopping-cart" element={<LandingPage />} />
-			<Route path="/shop/:category" element={<ShoppingPage />} />
+			<Route path="/shopping-cart/shop/:category" element={<ShoppingPage />} />
 		</Routes>
 	);
 };
