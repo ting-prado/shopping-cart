@@ -4,18 +4,20 @@ import {
 	SET_PRODUCTS,
 	SET_CATEGORIES,
 	UPDATE_CART,
-	REMOVE_ALL_IN_CART
+	REMOVE_ALL_IN_CART,
+	SET_LOADING
 } from "../actions";
 
 const initialState = {
 	products: [],
 	categories: [],
 	cartList: [],
-	cartCount: 0
+	cartCount: 0,
+	isLoading: false
 };
 
 const reducer = (state = initialState, action) => {
-	const { item, products, categories } = action;
+	const { item, products, categories, value } = action;
 	switch (action.type) {
 		case SET_PRODUCTS:
 			return {
@@ -51,6 +53,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				categories: categories
+			};
+		case SET_LOADING:
+			return {
+				...state,
+				isLoading: value
 			};
 		default:
 			return state;

@@ -5,6 +5,7 @@
 }
 
 .shop-content {
+	position: relative;
 	border-radius: 6px;
 	background-color: #fff;
 	box-shadow: 0px 5px 5px 2px #6e6e6e6c;

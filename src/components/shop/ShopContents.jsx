@@ -4,9 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import { getProducts } from "../../redux/actions";
 import ItemCard from "./ItemCard";
+import Loader from "../shared/Loader";
 
 const ShopContents = () => {
 	let location = useLocation();
+	const isLoading = useSelector((state) => state.isLoading);
 	const dispatch = useDispatch();
 	const { category } = useParams();
 	const products = useSelector((state) => state.products);
@@ -17,6 +19,7 @@ const ShopContents = () => {
 
 	return (
 		<div className="shop-content w-100">
+			{isLoading && <Loader />}
 			{products.map((product, idx) => (
 				<ItemCard key={idx} item={product} />
 			))}

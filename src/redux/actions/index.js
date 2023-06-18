@@ -6,6 +6,8 @@ export const GET_PRODUCTS = "GET_PRODUCTS";
 export const SET_PRODUCTS = "SET_PRODUCTS";
 export const GET_CATEGORIES = "GET_CATEGORIES";
 export const SET_CATEGORIES = "SET_CATEGORIES";
+export const GET_LOADING = "GET_LOADING";
+export const SET_LOADING = "SET_LOADING";
 
 export const addToCart = (item) => ({
 	type: ADD_TO_CART,
@@ -43,4 +45,13 @@ export const getCategories = () => ({
 export const setCategories = (categories) => ({
 	type: SET_CATEGORIES,
 	categories
+});
+
+export const getLoading = () => ({
+	type: GET_LOADING
+});
+
+export const setLoading = (value) => ({
+	type: SET_LOADING,
+	value
 });
