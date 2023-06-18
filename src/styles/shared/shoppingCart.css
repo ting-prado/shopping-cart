@@ -26,15 +26,17 @@
 }
 
 .cart-item span {
-	width: 40%;
+	width: 36%;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	height: 100px;
+	flex: 1 0 auto;
 }
 
 .cart-item > div {
 	width: 60%;
+	flex: 1 0 auto;
 }
 
 .cart-item img {
