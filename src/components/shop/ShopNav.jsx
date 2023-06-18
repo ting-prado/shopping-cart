@@ -22,7 +22,7 @@ const ShopNav = () => {
 					{categories.map((category, idx) => (
 						<li className="col-auto col-sm-12" key={idx}>
 							<Link
-								to={`/shop/${category}`}
+								to={`/shopping-cart/shop/${category}`}
 								className={
 									location.pathname === `/shopping-cart/shop/${category}`
 										? "active"
