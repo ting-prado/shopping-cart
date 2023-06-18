@@ -31,10 +31,10 @@ const TopNav = () => {
 					<Navbar.Toggle aria-controls="navbar" />
 					<Navbar.Collapse id="navbar">
 						<Nav>
-							<Link to="/" className="link">
+							<Link to="/shopping-cart" className="link">
 								Home
 							</Link>
-							<Link to="/shop/smartphones" className="link">
+							<Link to="/shopping-cart/shop/smartphones" className="link">
 								Shop
 							</Link>
 							<button

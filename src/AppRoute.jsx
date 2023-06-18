@@ -5,7 +5,7 @@ import ShoppingPage from "./components/shop/ShoppingPage";
 const AppRoute = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<LandingPage />} />
+			<Route path="/shopping-cart" element={<LandingPage />} />
 			<Route path="/shop/:category" element={<ShoppingPage />} />
 		</Routes>
 	);

@@ -24,7 +24,9 @@ const ShopNav = () => {
 							<Link
 								to={`/shop/${category}`}
 								className={
-									location.pathname === `/shop/${category}` ? "active" : ""
+									location.pathname === `/shopping-cart/shop/${category}`
+										? "active"
+										: ""
 								}
 							>
 								<span>{category[0].toUpperCase() + category.slice(1)}</span>
